@@ -1,7 +1,7 @@
 # GAN-based-Unsupervised-Outlier-Detection
-为了实现无监督离群点检测，我们的模型主要包含了两个网络：GAN网络与自编码器。
-GAN网络将待检测数据作为真实数据进行拟合。当GAN网络训练完成后，其生成的假数据被作为假的“正常对象”来训练自编码器。当第二阶段的自编码器训练完成后，将待检测数据集输入自编码器进行一次正向传播。
-最后，在自编码器的输出层计算对象的重构误差，重构误差越大，越有可能是离群点。
-在运行我们的项目时，需要调整GAN网络中fake data保存的路径；同时，针对不同的数据集，需要调整适宜的参数。
-在本项目中，我们给出了示例数据，其他数据集都可以在ODDS官网找到。
+To achieve unsupervised outlier detection, our model consists of two main networks: the GAN network and the autoencoder.
+The GAN network fits the data to be detected as real data. After the GAN network is trained, the generated fake data are used as fake "normal objects" to train the autoencoder. When the second stage of the autoencoder training is completed, the data set to be detected is fed into the autoencoder for a forward propagation.
+Finally, the reconstruction error of the object is computed at the output layer of the autoencoder; the larger the reconstruction error, the more likely it is an outlier.
+When running our project, the path where the fake data is saved in the GAN network needs to be adjusted; also, the appropriate parameters need to be adjusted for different datasets.
+In this project, we give the example data, other datasets can be found in ODDS official website.
 #ODDS：http://odds.cs.stonybrook.edu/
